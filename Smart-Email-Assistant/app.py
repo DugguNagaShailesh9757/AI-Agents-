@@ -26,4 +26,23 @@ tone = st.selectbox(
 )
 
 if st.button("Generate Email"):
-    st.info("Gemini AI integration will be added in the next step.")
+
+    prompt = f"""
+    You are an expert email writer.
+
+    Write a professional email using the following details.
+
+    Recipient: {recipient}
+
+    Subject: {subject}
+
+    Purpose: {purpose}
+
+    Tone: {tone}
+    """
+
+    response = model.generate_content(prompt)
+
+    st.subheader("Generated Email")
+
+    st.write(response.text)
