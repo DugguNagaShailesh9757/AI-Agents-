@@ -1,7 +1,11 @@
 import streamlit as st
 from google import genai
 from export_utils import export_to_txt
+from pathlib import Path
 
+# -----------------------------
+# Page Configuration
+# -----------------------------
 st.set_page_config(
     page_title="Travel Itinerary Planner",
     page_icon="✈️",
@@ -9,26 +13,52 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Load CSS
-with open("style.css") as f:
-    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+# -----------------------------
+# Load CSS (if available)
+# -----------------------------
+css_path = Path(__file__).parent / "style.css"
 
+if css_path.exists():
+    with open(css_path, "r", encoding="utf-8") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+# -----------------------------
+# App Title
+# -----------------------------
 st.title("✈️ AI Travel Itinerary Planner")
 st.markdown("Plan your perfect trip with Google Gemini AI.")
 
+# -----------------------------
 # Gemini Client
+# -----------------------------
 client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
+# -----------------------------
 # User Inputs
+# -----------------------------
 destination = st.text_input("Destination")
-days = st.number_input("Number of Days", min_value=1, max_value=30, value=3)
-budget = st.selectbox("Budget", ["Low", "Medium", "High"])
+
+days = st.number_input(
+    "Number of Days",
+    min_value=1,
+    max_value=30,
+    value=3
+)
+
+budget = st.selectbox(
+    "Budget",
+    ["Low", "Medium", "High"]
+)
+
 interests = st.text_area(
     "Interests (e.g. beaches, food, adventure, history)"
 )
 
+# -----------------------------
 # Generate Itinerary
+# -----------------------------
 if st.button("Generate Itinerary"):
+
     if destination and interests:
 
         prompt = f"""
@@ -41,16 +71,21 @@ Budget: {budget}
 Interests: {interests}
 
 Include:
-- Day-wise schedule
-- Morning, Afternoon, Evening plans
+
+- Day-wise itinerary
+- Morning activities
+- Afternoon activities
+- Evening activities
 - Tourist attractions
-- Food recommendations
+- Local food recommendations
+- Hotel recommendations
 - Estimated daily budget
-- Hotel suggestions
+- Transportation suggestions
 - Travel tips
 """
 
         try:
+
             response = client.models.generate_content(
                 model="gemini-flash-latest",
                 contents=prompt
@@ -59,7 +94,6 @@ Include:
             st.subheader("📍 Your Travel Plan")
             st.write(response.text)
 
-            # Export to TXT
             filename = export_to_txt(response.text)
 
             with open(filename, "rb") as file:
@@ -74,4 +108,4 @@ Include:
             st.error(f"Error: {e}")
 
     else:
-        st.warning("⚠️ Please fill all fields.")
+        st.warning("⚠️ Please fill all the fields.")
