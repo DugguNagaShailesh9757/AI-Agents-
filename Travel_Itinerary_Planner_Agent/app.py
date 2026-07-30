@@ -21,35 +21,33 @@ interests = st.text_area(
 
 if st.button("Generate Itinerary"):
     if destination and interests:
+
         prompt = f"""
-        Create a detailed {days}-day travel itinerary.
+Create a detailed {days}-day travel itinerary.
 
-        Destination: {destination}
-        Budget: {budget}
-        Interests: {interests}
+Destination: {destination}
+Budget: {budget}
+Interests: {interests}
 
-        Include:
-        - Day-wise schedule
-        - Morning, Afternoon, Evening plans
-        - Food recommendations
-        - Estimated daily budget
-        - Travel tips
-        """
+Include:
+- Day-wise schedule
+- Morning, Afternoon, Evening plans
+- Food recommendations
+- Estimated daily budget
+- Travel tips
+"""
 
-        
         try:
-    response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=prompt
-    )
+            response = client.models.generate_content(
+                model="gemini-2.5-flash",
+                contents=prompt
+            )
 
-    st.subheader("Your Travel Plan")
-    st.write(response.text)
+            st.subheader("Your Travel Plan")
+            st.write(response.text)
 
-except Exception as e:
-    st.error(f"Error: {e}")
+        except Exception as e:
+            st.error(f"Error: {str(e)}")
 
-        st.subheader("Your Travel Plan")
-        st.write(response.text)
     else:
         st.warning("Please fill all fields.")
