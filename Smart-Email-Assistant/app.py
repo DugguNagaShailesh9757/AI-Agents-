@@ -1,5 +1,12 @@
-import streamlit as st
 from google import genai
+import streamlit as st
+
+client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
+
+st.write("Available Models:")
+
+for model in client.models.list():
+    st.write(model.name)
 from export_utils import export_to_txt
 
 st.set_page_config(
