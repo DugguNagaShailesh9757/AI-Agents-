@@ -40,24 +40,24 @@ Include:
 
         try:
             response = client.models.generate_content(
-    model="gemini-flash-latest",
-    contents=prompt
-)
-            
+                model="gemini-flash-latest",
+                contents=prompt
+            )
 
             st.subheader("Your Travel Plan")
             st.write(response.text)
-            
-    filename = export_to_txt(response.text)
 
-with open(filename, "rb") as file:
-    st.download_button(
-        label="📥 Download Itinerary",
-        data=file,
-        file_name=filename,
-        mime="text/plain"
-    )
-            except Exception as e:
+            filename = export_to_txt(response.text)
+
+            with open(filename, "rb") as file:
+                st.download_button(
+                    label="📥 Download Itinerary",
+                    data=file,
+                    file_name=filename,
+                    mime="text/plain"
+                )
+
+        except Exception as e:
             st.error(f"Error: {str(e)}")
 
     else:
