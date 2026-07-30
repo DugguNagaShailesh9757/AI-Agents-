@@ -1,1 +1,28 @@
+.stApp {
+    background-color: #f8f9fa;
+}
 
+h1 {
+    color: #1565C0;
+    text-align: center;
+}
+
+.stButton > button {
+    background-color: #1565C0;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;
+}
+
+.stButton > button:hover {
+    background-color: #0D47A1;
+}
+
+.stTextArea textarea {
+    border-radius: 8px;
+}
+
+.stSelectbox div {
+    border-radius: 8px;
+}
