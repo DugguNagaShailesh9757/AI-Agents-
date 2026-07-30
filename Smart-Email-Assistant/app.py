@@ -1,4 +1,8 @@
 import streamlit as st
+import google.generativeai as genai
+
+genai.configure(api_key="YOUR_GEMINI_API_KEY")
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 st.set_page_config(
     page_title="Smart Email Assistant",
