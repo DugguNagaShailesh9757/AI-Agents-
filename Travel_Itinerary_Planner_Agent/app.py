@@ -1,5 +1,6 @@
 import streamlit as st
 from google import genai
+from export_utils import export_to_txt
 
 st.set_page_config(
     page_title="Travel Itinerary Planner",
@@ -46,8 +47,17 @@ Include:
 
             st.subheader("Your Travel Plan")
             st.write(response.text)
+            
+    filename = export_to_txt(response.text)
 
-        except Exception as e:
+with open(filename, "rb") as file:
+    st.download_button(
+        label="📥 Download Itinerary",
+        data=file,
+        file_name=filename,
+        mime="text/plain"
+    )
+            except Exception as e:
             st.error(f"Error: {str(e)}")
 
     else:
