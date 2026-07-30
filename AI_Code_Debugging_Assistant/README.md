@@ -102,12 +102,12 @@ streamlit run app.py
    - Optimization tips
 6. User can download the debugging report.
 
-## 📸 Application Screenshot
+## 📸 Application Images 
 
 (Add your Streamlit app screenshot here)
 
 ```
-![AI Code Debugging Assistant](images/app_screenshot.png)
+![AI Code Debugging Assistant](images/app_images.png)
 ```
 
 ## 🌐 Deployment
@@ -125,6 +125,6 @@ The application is deployed using:
 - AI code review features
 - Voice-based debugging assistant
 
-## App Screenshot
+## App Images 
 
 ![AI Code Debugging Assistant](images/20260730_232935.jpg,20260730_234127.jpg)
