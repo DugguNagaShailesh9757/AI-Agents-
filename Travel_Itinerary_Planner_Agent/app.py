@@ -5,10 +5,12 @@ from export_utils import export_to_txt
 st.set_page_config(
     page_title="Travel Itinerary Planner",
     page_icon="✈️",
-    layout="centered"
+    layout="centered",
+    initial_sidebar_state="expanded"
 )
 
 st.title("✈️ AI Travel Itinerary Planner")
+st.markdown("Plan your perfect trip with Google Gemini AI.")
 
 # Gemini Client
 client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
