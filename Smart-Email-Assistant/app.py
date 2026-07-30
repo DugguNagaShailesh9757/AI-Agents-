@@ -2,9 +2,6 @@ import streamlit as st
 import google.generativeai as genai
 from export_utils import export_to_txt
 
-genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-model = genai.GenerativeModel("gemini-2.5-flash")
-
 st.set_page_config(
     page_title="Smart Email Assistant",
     page_icon="📧",
@@ -12,13 +9,15 @@ st.set_page_config(
 )
 
 st.title("📧 Smart Email Assistant")
-
 st.write("Generate professional emails using Google Gemini AI.")
 
+# Temporary API Key
+genai.configure(api_key="YOUR_GEMINI_API_KEY")
+
+model = genai.GenerativeModel("gemini-2.5-flash")
+
 recipient = st.text_input("Recipient")
-
 subject = st.text_input("Subject")
-
 purpose = st.text_area("Purpose")
 
 tone = st.selectbox(
@@ -27,23 +26,27 @@ tone = st.selectbox(
 )
 
 if st.button("Generate Email"):
+    try:
+        prompt = f"""
+        Write a professional email.
 
-    prompt = f"""
-    You are an expert email writer.
+        Recipient: {recipient}
+        Subject: {subject}
+        Purpose: {purpose}
+        Tone: {tone}
+        """
 
-    Write a professional email using the following details.
+        response = model.generate_content(prompt)
 
-    Recipient: {recipient}
+        st.subheader("Generated Email")
+        st.write(response.text)
 
-    Subject: {subject}
+        st.download_button(
+            label="📥 Download Email",
+            data=export_to_txt(response.text),
+            file_name="generated_email.txt",
+            mime="text/plain"
+        )
 
-    Purpose: {purpose}
-
-    Tone: {tone}
-    """
-
-    response = model.generate_content(prompt)
-
-    st.subheader("Generated Email")
-
-    st.write(response.text)
+    except Exception as e:
+        st.error(f"Error: {e}")
