@@ -36,10 +36,18 @@ if st.button("Generate Itinerary"):
         - Travel tips
         """
 
-        response = client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=prompt
-        )
+        
+        try:
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=prompt
+    )
+
+    st.subheader("Your Travel Plan")
+    st.write(response.text)
+
+except Exception as e:
+    st.error(f"Error: {e}")
 
         st.subheader("Your Travel Plan")
         st.write(response.text)
