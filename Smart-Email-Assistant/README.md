@@ -70,3 +70,7 @@ Email templates library
 
 License
 This project is developed for educational purposes.
+
+## 📸 Application Screenshot
+
+![Smart_Email_Assistant](images/Travel_Itinerary_Planner.png)
