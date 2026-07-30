@@ -12,7 +12,7 @@ st.title("📧 Smart Email Assistant")
 st.write("Generate professional emails using Google Gemini AI.")
 
 # Temporary API Key
-genai.configure(api_key="YOUR_GEMINI_API_KEY")
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 model = genai.GenerativeModel("gemini-2.5-flash")
 
