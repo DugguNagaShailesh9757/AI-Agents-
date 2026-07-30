@@ -127,4 +127,4 @@ The application is deployed using:
 
 ## App Screenshot
 
-![AI Code Debugging Assistant](images/app_screenshot.png)
+![AI Code Debugging Assistant](images/20260730_232935.jpg,20260730_234127.jpg)
