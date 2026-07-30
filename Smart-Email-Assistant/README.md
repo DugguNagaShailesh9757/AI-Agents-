@@ -32,9 +32,9 @@ Smart-Email-Assistant/ │ ├── app.py                 # Main Streamlit app
 
 ```bash
 git clone <your-github-repository-link>
-Install Dependencies
+# 2.Install Dependencies
 pip install -r requirements.txt
-3. Configure Gemini API Key
+# 3. Configure Gemini API Key
 Create a .streamlit/secrets.toml file:
 GEMINI_API_KEY="your_api_key_here"
 ▶️ Run Application
