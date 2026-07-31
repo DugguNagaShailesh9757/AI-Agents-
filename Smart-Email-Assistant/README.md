@@ -70,7 +70,3 @@ Email templates library
 
 License
 This project is developed for educational purposes.
-
-## 📸 Application Screenshot
-
-![Smart_Email_Assistant](images/20260730_234127.jpg)
