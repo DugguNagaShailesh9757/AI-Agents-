@@ -1,4 +1,4 @@
-#  AI Agent Project Name
+#  AI Agent Project
 
 ##  Introduction
 This project is an AI-powered agent developed using Python, Streamlit, and a Large Language Model (LLM). It is designed to automate a specific task by understanding user input, reasoning about the request, and generating intelligent responses in real time.
