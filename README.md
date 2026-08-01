@@ -229,15 +229,36 @@ Special thanks to:
 
 **Naga Shailesh**
 
-GitHub: https://github.com/DugguNagaShailesh9757/AI-Agents-.git
+🎓 Aspiring Software Engineer | AI & Python Enthusiast
+
+I developed this AI-powered application using **Python**, **Streamlit**, and **Google Gemini AI**. This project demonstrates my skills in AI application development, prompt engineering, GitHub project management, and modern web application deployment.
+
+### 🔗 Connect with Me
+
+- **GitHub:** https://github.com/DugguNagaShailesh9757
+- **Project Repository:** https://github.com/DugguNagaShailesh9757/AI-Agents-
 
 ---
-⭐ If you like this project, consider giving it a star on GitHub.
 
-##  Support
-If you found this project helpful, please consider giving it a ⭐ on GitHub.
+## 🤝 Support
 
+If you found this project useful, please consider supporting it by:
 
-##  License
+- ⭐ Starring this repository on GitHub
+- 🍴 Forking the project to build your own version
+- 🐞 Reporting bugs or suggesting improvements
+- 💡 Contributing new features through Pull Requests
 
-This project is licensed under the MIT License.
+Your support helps improve this project and motivates future AI development.
+
+---
+
+## 📄 License
+
+This project is open-source and available under the **MIT License**.
+
+---
+
+### ⭐ Thank You for Visiting!
+
+Thank you for exploring this project. I hope it helps you generate professional emails quickly and efficiently. Your feedback and suggestions are always welcome!
