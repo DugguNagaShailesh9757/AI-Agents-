@@ -225,6 +225,15 @@ Special thanks to:
 
 ---
 
+## 👨‍💻 Developed By
+
+**Naga Shailesh**
+
+GitHub: https://github.com/DugguNagaShailesh9757/AI-Agents-.git
+
+---
+⭐ If you like this project, consider giving it a star on GitHub.
+
 ##  Support
 If you found this project helpful, please consider giving it a ⭐ on GitHub.
 
