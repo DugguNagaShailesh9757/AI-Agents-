@@ -26,6 +26,7 @@ The application takes user inputs like recipient, subject, purpose, and tone, th
 
 ## 📂 Project Structure
 Smart-Email-Assistant/ │ ├── app.py                 # Main Streamlit application ├── export_utils.py        # Email export utility ├── requirements.txt       # Required Python libraries ├── README.md              # Project documentation │ └── .streamlit/ └── secrets.toml       # API key configuration
+
 ## ⚙️ Installation & Setup
 
 ### 1. Clone Repository
@@ -33,7 +34,7 @@ Smart-Email-Assistant/ │ ├── app.py                 # Main Streamlit app
 ```bash
 git clone <your-github-repository-link>
 
-### 2.Install Dependencies
+### 2. Install Dependencies
 
 pip install -r requirements.txt
 
@@ -41,6 +42,7 @@ pip install -r requirements.txt
 
 Create a .streamlit/secrets.toml file:
 GEMINI_API_KEY="your_api_key_here"
+
 ▶️ Run Application
 Start the Streamlit app:
 streamlit run app.py
