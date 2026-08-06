@@ -1,4 +1,4 @@
-# 🤖 AI Agents Collection
+#                                         🤖 AI Agents Collection
 
 <div align="center">
 
@@ -16,7 +16,7 @@
 
 ---
 
-# 📖 About This Repository
+#                                            📖 About This Repository
 
 This repository contains multiple AI-powered applications developed using **Python**, **Streamlit**, and **Google Gemini AI**.
 
@@ -26,7 +26,7 @@ These projects demonstrate practical applications of Large Language Models (LLMs
 
 ---
 
-# 🎯 Objectives
+#                                  🎯 Objectives
 
 - Learn AI application development
 - Build practical AI solutions
@@ -38,9 +38,9 @@ These projects demonstrate practical applications of Large Language Models (LLMs
 
 ---
 
-# 📂 AI Agents Included
+#                                              📂 AI Agents Included
 
-## 📧 Smart Email Assistant
+##                                            📧 Smart Email Assistant
 
 Generate professional emails instantly from simple user prompts.
 
@@ -54,11 +54,11 @@ Generate professional emails instantly from simple user prompts.
 
 ---
 
-## ✈ Travel Itinerary Planner
+##                                            ✈ Travel Itinerary Planner
 
 Create personalized travel plans based on destination, duration, and budget.
 
-### Features
+###  Features
 
 - Day-wise itinerary
 - Budget planning
@@ -68,11 +68,11 @@ Create personalized travel plans based on destination, duration, and budget.
 
 ---
 
-## 💻 AI Code Debugging Assistant
+##                                          💻 AI Code Debugging Assistant
 
 Analyze, explain, and debug Python code using AI.
 
-### Features
+###   Features
 
 - Error detection
 - Bug fixing
@@ -82,7 +82,7 @@ Analyze, explain, and debug Python code using AI.
 
 ---
 
-# ✨ Common Features
+#   ✨ Common Features
 
 - 🤖 AI-Powered Responses
 - 💬 Natural Language Processing
@@ -94,7 +94,7 @@ Analyze, explain, and debug Python code using AI.
 
 ---
 
-# 🛠 Tech Stack
+#   🛠 Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
@@ -107,7 +107,7 @@ Analyze, explain, and debug Python code using AI.
 
 ---
 
-# 📂 Repository Structure
+#   📂 Repository Structure
 
 ```text
 AI-Agents/
@@ -216,7 +216,7 @@ Through these projects, I learned:
 
 ---
 
-# 🧪 Testing
+#    🧪 Testing
 
 Each application has been tested for:
 
@@ -230,7 +230,7 @@ Each application has been tested for:
 
 ---
 
-# ⚡ Performance
+#    ⚡ Performance
 
 - Fast Response Generation
 - Lightweight Applications
@@ -240,7 +240,7 @@ Each application has been tested for:
 
 ---
 
-# 🤝 Contributing
+#    🤝 Contributing
 
 Contributions are welcome.
 
@@ -252,7 +252,7 @@ Contributions are welcome.
 
 ---
 
-# 🙏 Acknowledgements
+#     🙏 Acknowledgements
 
 Special thanks to:
 
@@ -264,7 +264,7 @@ Special thanks to:
 
 ---
 
-# 👨‍💻 Developed By
+#                                                       👨‍💻 Developed By
 
 ## Naga Shailesh
 
