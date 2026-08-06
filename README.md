@@ -26,7 +26,7 @@ These projects demonstrate practical applications of Large Language Models (LLMs
 
 ---
 
-#                                  🎯 Objectives
+#                                                🎯 Objectives
 
 - Learn AI application development
 - Build practical AI solutions
